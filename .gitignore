@@ -1,2 +1,2 @@
-\authentication-module\log_learn\log_learn\.env
-\authentication-module\log_learn\db.sqlite3
+/authentication-module/log_learn/log_learn/.env
+/authentication-module/log_learn/db.sqlite3
