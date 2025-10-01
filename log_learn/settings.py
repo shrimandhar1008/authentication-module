@@ -33,13 +33,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'authenticationapp.apps.AuthenticationappConfig',
+
+    'rest_framework',
+    'rest_framework.authtoken',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authenticationapp',
+    # 'authenticationapp',
     'crispy_forms',
     'crispy_bootstrap4',
 ]
@@ -73,6 +78,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'log_learn.wsgi.application'
 
+# ============== rest_framework_settings===================== #
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+               'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES':(
+                'rest_framework.permissions.IsAuthenticated',
+    ),
+
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
