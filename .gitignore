@@ -3,3 +3,5 @@
 
 # SQLite databases
 *.sqlite3
+
+*.idea/
